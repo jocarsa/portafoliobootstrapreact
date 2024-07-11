@@ -1,7 +1,9 @@
 import './ficha.css';
 
 function Ficha({titulo,contenido,tiempo}) {
-    
+    const clickBoton = function(){
+        alert("Has hecho click en "+titulo)
+    }
   return (
       <div class="col">
               <div class="card shadow-sm">
@@ -10,7 +12,7 @@ function Ficha({titulo,contenido,tiempo}) {
                   <p class="card-text">{contenido}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"  onClick={clickBoton}>View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
                     <small class="text-body-secondary">{tiempo} mins</small>
