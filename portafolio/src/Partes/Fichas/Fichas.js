@@ -1,6 +1,23 @@
+import React, { useState, useEffect } from 'react';
 import './fichas.css';
 import Ficha from './Ficha/Ficha';
 function Fichas() {
+    const [fichas, setFichas] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/")
+            .then(response => response.json())
+            .then(function(data){
+                setFichas(data)
+            console.log(data)
+                })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+    /*
+    const mis_articulos = articulos.map(articulo => 
+        <Articulo titulo = {articulo.titulo} contenido={articulo.contenido}  fecha={articulo.fecha}  categoria={articulo.categoria} />
+    )
+    */
   return (
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
