@@ -29,6 +29,11 @@ portafolio = [
             "titulo":"Portafolio 5",
             "contenido":"Este es el texto",
             "tiempo":1
+        },
+        {
+            "titulo":"Portafolio 6",
+            "contenido":"Este es el texto",
+            "tiempo":1
         }
     ]
 
